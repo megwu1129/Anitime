@@ -9,7 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrolllingViewBehavior"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         tools:layout_editor_absoluteX="-32dp"
         tools:layout_editor_absoluteY="-222dp">
 
@@ -38,14 +38,14 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/card_image"
+                            android:id="@+id/card_image1"
                             android:layout_width="match_parent"
                             android:layout_height="230dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/event3"></ImageView>
+                            android:src="@drawable/event3"/>
 
                         <TextView
-                            android:id="@+id/eventName"
+                            android:id="@+id/eventTitle1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal|bottom"
@@ -54,7 +54,7 @@
                             android:text="Puppy Social"
                             android:textColor="@color/white"
                             android:textSize="30sp"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -79,14 +79,14 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="@+id/day"
+                                        android:id="@+id/day1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="29"
                                         android:textAlignment="center"
                                         android:textColor="@color/textBlue"
                                         android:textSize="25sp"
-                                        android:textStyle="bold"></TextView>
+                                        android:textStyle="bold"/>
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -98,14 +98,14 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="@+id/month"
+                                        android:id="@+id/month1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Nov"
                                         android:textAlignment="center"
                                         android:textColor="@color/textBlue"
                                         android:textSize="15sp"
-                                        android:textStyle="bold"></TextView>
+                                        android:textStyle="bold"/>
                                 </LinearLayout>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -113,6 +113,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:baselineAligned="false"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center"
@@ -130,10 +131,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/icon_location"></ImageView>
-
+                            android:src="@drawable/icon_location"/>
                         <TextView
-                            android:id="@+id/location"
+                            android:id="@+id/location1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
@@ -141,9 +141,8 @@
                             android:text="Helms Park, Champaign"
                             android:textColor="@color/deepBlue"
                             android:textSize="16sp"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold"/>
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -157,18 +156,16 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/count_background"
                             android:orientation="vertical">
-
                             <TextView
-                                android:id="@+id/count"
+                                android:id="@+id/count1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
                                 android:text="+12"
                                 android:textAlignment="center"
                                 android:textColor="@color/textBlue"
-                                android:textSize="15sp"></TextView>
+                                android:textSize="15sp"/>
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -176,7 +173,322 @@
                             android:maxLines="1"
                             android:text="are going"
                             android:textColor="@android:color/darker_gray">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/eventCardLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="20dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/card_image2"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/event5"/>
+
+                        <TextView
+                            android:id="@+id/eventName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Dogs Walking"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:elevation="5dp"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="65dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:weightSum="10">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="7.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/day2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="4"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/textBlue"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:background="@color/lightBlue"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/month2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Dec"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/textBlue"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:baselineAligned="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_location"/>
+                        <TextView
+                            android:id="@+id/location2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Main Quad, UIUC"
+                            android:textColor="@color/deepBlue"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="end|center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/count_background"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/count2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="+5"
+                                android:textAlignment="center"
+                                android:textColor="@color/textBlue"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:maxLines="1"
+                            android:text="are going"
+                            android:textColor="@android:color/darker_gray">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eventCardLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="20dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/card_image3"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/event2"/>
+
+                        <TextView
+                            android:id="@+id/eventTitle3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Meeting new friends!"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:elevation="5dp"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="65dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:weightSum="10">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="7.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/day3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="15"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/textBlue"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:background="@color/lightBlue"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/month3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Jan"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/textBlue"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:baselineAligned="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_location"/>
+                        <TextView
+                            android:id="@+id/location3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Pet-friendly restaurant"
+                            android:textColor="@color/deepBlue"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="end|center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/count_background"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/count3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="+26"
+                                android:textAlignment="center"
+                                android:textColor="@color/textBlue"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:maxLines="1"
+                            android:text="are going"
+                            android:textColor="@android:color/darker_gray">
                         </TextView>
                     </LinearLayout>
                 </LinearLayout>

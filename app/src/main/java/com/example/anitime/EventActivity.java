@@ -1,4 +1,4 @@
-package com.example.anitime.ui.slideshow;
+package com.example.anitime;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.anitime.R;
 import com.example.anitime.databinding.FragmentEventsBinding;
 
-public class SlideshowFragment extends Fragment {
+public class EventActivity extends Fragment {
 
     //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
