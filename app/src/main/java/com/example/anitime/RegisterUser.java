@@ -14,13 +14,18 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener{
     private TextView register;
     private EditText editTextFullName, editTextPhone, editTextEmail, editTextPassword;
     private ProgressBar progressBar;
+
 
 
     private FirebaseAuth mAuth;
@@ -51,10 +56,15 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         }
     }
     public void registerUser(){
+
         String name = editTextFullName.getText().toString().trim();
         String phone = editTextPhone.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+
+        System.out.println(name);
+        System.out.println(phone);
+        System.out.println(email);
 
         if(name.isEmpty()){
             editTextFullName.setError("Please enter you full name.");
@@ -87,16 +97,27 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        Toast.makeText(RegisterUser.this, "You are registered successfully!", Toast.LENGTH_LONG).show();
 
-//        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//            @Override
-//            public void onComplete(@NonNull Task<AuthResult> task) {
-//                if(task.isSuccessful()){
-//                    User user = new User(name, phone, email);
-//                    FirebaseAuth.
-//                }
-//            }
-//        })
+        mAuth.createUserWithEmailAndPassword(email, password)
+        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    User user = new User(name, phone, email);
+                    FirebaseDatabase.getInstance().getReference("Users")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(RegisterUser.this, "You are registered successfully!", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        Toast.makeText(RegisterUser.this, "Sorry something went wrong.", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                }
+            }
+        });
     }
 }
