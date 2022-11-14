@@ -16,8 +16,6 @@
         android:layout_marginTop="32dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="25dp"
-        app:layout_constrainedWidth_percent=".9"
-        app:layout_constraintHeight_percent=".85"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -215,32 +213,53 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="start|center">
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/count_background"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/count1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="10dp"
-                                android:text="+12"
-                                android:textAlignment="center"
-                                android:textColor="@color/textBlue"
-                                android:textSize="15sp"/>
-                        </LinearLayout>
-
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="5dp"
-                            android:maxLines="1"
-                            android:text="are going"
-                            android:textColor="@android:color/darker_gray"/>
+                            android:padding="10dp"
+                            android:text="12 are going!"
+                            android:textColor="@color/textBlue"
+                            android:textSize="15sp"/>
                     </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:id="@+id/pet1"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/pet3"
+                            />
+                        <ImageButton
+                            android:id="@+id/pet2"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@id/pet1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/pet2"
+                            />
+                        <ImageButton
+                            android:id="@+id/pet4"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@id/pet2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/pet4"
+                            />
+                        <ImageButton
+                            android:id="@+id/pet5"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@id/pet4"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/pet5"
+                            />
+                    </RelativeLayout>
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
@@ -255,8 +274,6 @@
         android:gravity="center|start"
         android:orientation="horizontal"
         android:weightSum="10"
-        app:layout_constrainedHeight_percent=".1"
-        app:layout_constrainedWidth_percent=".9"
         app:layout_constraintLeft_toLeftOf="@+id/eventCard"
         app:layout_constraintRight_toRightOf="@+id/eventCard"
         app:layout_constraintTop_toBottomOf="@+id/eventCard">
@@ -264,7 +281,6 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:alignLeft="@+id/eventCard"
             android:background="@drawable/ic_baseline_cancel_24" />
 
         <LinearLayout
