@@ -15,13 +15,6 @@ import com.example.anitime.databinding.FragmentEventsBinding;
 
 public class SlideshowFragment extends Fragment {
 
-    //    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.fragment_events);
-//    }
-//
-//}
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,25 +22,3 @@ public class SlideshowFragment extends Fragment {
         return rootView;
     }
 }
-//
-//    private FragmentEventsBinding binding;
-//
-//    public View onCreateView(@NonNull LayoutInflater inflater,
-//                             ViewGroup container, Bundle savedInstanceState) {
-//        SlideshowViewModel slideshowViewModel =
-//                new ViewModelProvider(this).get(SlideshowViewModel.class);
-//
-//        binding = FragmentEventsBinding.inflate(inflater, container, false);
-//        View root = binding.getRoot();
-//
-//        final TextView textView = binding.textSlideshow;
-//        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-//        return root;
-//    }
-//
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        binding = null;
-//    }
-//}
