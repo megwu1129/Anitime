@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightYellow"
+    android:background="@color/blueGreen"
     android:id="@+id/eventPage"
     >
 
@@ -229,7 +229,7 @@
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/pet3"
+                            android:background="@drawable/event_pet1"
                             />
                         <ImageButton
                             android:id="@+id/pet2"
@@ -238,7 +238,7 @@
                             android:layout_toEndOf="@id/pet1"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="5dp"
-                            android:background="@drawable/pet2"
+                            android:background="@drawable/event_pet2"
                             />
                         <ImageButton
                             android:id="@+id/pet4"
@@ -247,7 +247,7 @@
                             android:layout_toEndOf="@id/pet2"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="5dp"
-                            android:background="@drawable/pet4"
+                            android:background="@drawable/event_pet3"
                             />
                         <ImageButton
                             android:id="@+id/pet5"
@@ -256,7 +256,7 @@
                             android:layout_toEndOf="@id/pet4"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="5dp"
-                            android:background="@drawable/pet5"
+                            android:background="@drawable/event_pet4"
                             />
                     </RelativeLayout>
 

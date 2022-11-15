@@ -14,9 +14,10 @@
     <color name="lightText">#c9d3f7</color>
     <color name="hintColor">#b7c1e4</color>
     <color name="searchBarColor">#0023a1</color>
-    <color name="greenBtnColor">#48ceb9</color>
+    <color name="greenBtnColor">#f59584</color>
     <color name="lightBlue">#e6f2ff</color>
     <color name="textBlue">#268eff</color>
     <color name="deepBlue">#425186</color>
     <color name="lightYellow">#faf4cd</color>
+    <color name="blueGreen">#b6ddde</color>
 </resources>
