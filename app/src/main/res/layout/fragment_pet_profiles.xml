@@ -153,7 +153,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginLeft="10dp"
                             android:layout_marginBottom="20dp"
-                            android:text="Bao"
+                            android:text="Yoshi"
                             android:textColor="@color/white"
                             android:textSize="30sp"
                             android:id="@+id/eventTitle2"
@@ -186,7 +186,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
-                            android:text="Terry"
+                            android:text="Meg"
                             android:id="@+id/Owner2"
                             android:textSize="17sp"
 
