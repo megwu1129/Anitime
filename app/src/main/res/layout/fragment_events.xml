@@ -42,7 +42,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="230dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/event3"/>
+                            android:src="@drawable/event3" />
 
                         <TextView
                             android:id="@+id/eventTitle1"
