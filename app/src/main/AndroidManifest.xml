@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Anitime"
         tools:targetApi="31">
         <activity
+            android:name=".Pet_details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LogInUser"
             android:exported="true">
             <intent-filter>
@@ -20,6 +27,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -36,8 +44,6 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Anitime.NoActionBar">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
