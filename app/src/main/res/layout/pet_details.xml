@@ -60,7 +60,7 @@
             android:elevation="10dp"
             app:cornerRadius="10dp"
             app:elevation="10dp"
-            android:text="Yoshi     Cat • 6y 2m"
+            android:text="MiuMiu     Cat • 6y 2m"
             android:textSize="20sp"
             android:textStyle="bold"
             >
