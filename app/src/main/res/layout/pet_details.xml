@@ -155,7 +155,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yoshi is a loving cat who loves eating, sleeping, and cuddling! During winter, he sleeps 20 hours a day, and his favorite food is shrimp. He is looking for a fur friend to play with!"
+                android:text="Miumiu is a loving cat who loves eating, sleeping, and cuddling! During winter, he sleeps 20 hours a day, and his favorite food is shrimp. He is looking for a fur friend to play with!"
                 android:textSize="16sp"
                 />
 
