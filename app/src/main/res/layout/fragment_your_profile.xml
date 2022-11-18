@@ -30,18 +30,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/back"
-            android:text="Your Pet Profile"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="30sp" />
-
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
