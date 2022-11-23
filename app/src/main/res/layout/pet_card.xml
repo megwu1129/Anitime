@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.HomeFragment">
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/text_home"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+
+            <LinearLayout
+                android:id="@+id/eventCardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="20dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/card_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pet2"></ImageView>
+
+                        <TextView
+                            android:id="@+id/PetName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Cupper"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold"></TextView>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_weight="5"
+                        android:orientation="horizontal"
+                        android:paddingVertical="10dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/img_2" />
+
+                        <TextView
+                            android:id="@+id/OwnerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Daniel"
+
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:gravity="end|center"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/count_background"
+                            android:orientation="vertical"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/genderImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/female_icon" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/Breeder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:maxLines="1"
+                            android:text="Breeder"
+                            android:textColor="@android:color/darker_gray">
+
+                        </TextView>
+                        <TextView
+                            android:id="@+id/age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:maxLines="1"
+                            android:text="8month"
+                            android:textColor="@android:color/darker_gray">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/eventCardLayout2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:elevation="0dp"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/card_image2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="230dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/pet1"></ImageView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/eventTitle2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:layout_marginBottom="20dp"-->
+<!--                            android:text="Yoshi"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="30sp"-->
+<!--                            android:textStyle="bold"></TextView>-->
+<!--                    </FrameLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="10">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="start|center"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingVertical="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/img_2" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/Owner2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Meg"-->
+
+<!--                            android:textSize="17sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:gravity="end|center"-->
+<!--                        android:orientation="horizontal"-->
+
+<!--                        >-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/count_background"-->
+<!--                            android:orientation="vertical"-->
+
+<!--                            >-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:src="@drawable/male_icon" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Breeder 2years"-->
+<!--                            android:textColor="@android:color/darker_gray">-->
+
+<!--                        </TextView>-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/eventCardLayout3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:elevation="0dp"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/card_image3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="230dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/pet3"></ImageView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/eventTitle3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:layout_marginBottom="20dp"-->
+<!--                            android:text="MiuMiu"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="30sp"-->
+<!--                            android:textStyle="bold"></TextView>-->
+<!--                    </FrameLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="10">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="start|center"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingVertical="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/img_2" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/location3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="David"-->
+
+<!--                            android:textSize="17sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:gravity="end|center"-->
+<!--                        android:orientation="horizontal"-->
+
+<!--                        >-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/count_background"-->
+<!--                            android:orientation="vertical"-->
+
+<!--                            >-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:src="@drawable/female_icon" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Breeder 1year"-->
+<!--                            android:textColor="@android:color/darker_gray">-->
+
+<!--                        </TextView>-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/eventCardLayout4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:elevation="0dp"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/card_image4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="230dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/pet4"></ImageView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/eventTitle4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:layout_marginBottom="20dp"-->
+<!--                            android:text="Dogge"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="30sp"-->
+<!--                            android:textStyle="bold"></TextView>-->
+<!--                    </FrameLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="10">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="start|center"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:paddingVertical="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="25dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/img_2" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/Owner4"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Andy"-->
+
+<!--                            android:textSize="17sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="5"-->
+<!--                        android:gravity="end|center"-->
+<!--                        android:orientation="horizontal"-->
+
+<!--                        >-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/count_background"-->
+<!--                            android:orientation="vertical"-->
+
+<!--                            >-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:src="@drawable/female_icon" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Breeder"-->
+<!--                            android:textColor="@android:color/darker_gray">-->
+
+<!--                        </TextView>-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+
+</LinearLayout>
