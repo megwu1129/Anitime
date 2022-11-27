@@ -39,14 +39,14 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/card_image1"
+                            android:id="@+id/event_card_image"
                             android:layout_width="match_parent"
                             android:layout_height="230dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/event3" />
 
                         <TextView
-                            android:id="@+id/eventTitle1"
+                            android:id="@+id/eventTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal|bottom"
@@ -80,7 +80,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="@+id/day1"
+                                        android:id="@+id/day"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="29"
@@ -99,7 +99,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="@+id/month1"
+                                        android:id="@+id/month"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Nov"
@@ -134,7 +134,7 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/icon_location"/>
                         <TextView
-                            android:id="@+id/location1"
+                            android:id="@+id/location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
@@ -158,7 +158,7 @@
                             android:background="@drawable/count_background"
                             android:orientation="vertical">
                             <TextView
-                                android:id="@+id/count1"
+                                android:id="@+id/count"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="10dp"
