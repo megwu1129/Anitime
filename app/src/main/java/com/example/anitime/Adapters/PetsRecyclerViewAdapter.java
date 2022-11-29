@@ -35,13 +35,8 @@ public class PetsRecyclerViewAdapter extends RecyclerView.Adapter<PetsRecyclerVi
         holder.ownerName.setText(petsModelArrayList.get(position).getOwnerName());
         holder.breeder.setText(petsModelArrayList.get(position).getBreeder());
         holder.age.setText(petsModelArrayList.get(position).getAge());
-//        Glide.with(holder.petImage).load(petsModelArrayList.get(position).getUrlPic()).into(holder.petImage);
-//        Glide.with(holder.genderImage).load(petsModelArrayList.get(position).getUrlGender()).into(holder.genderImage);
-
-
-
-
-
+        holder.petImage.setImageResource(petsModelArrayList.get(position).getUrlPic());
+        holder.genderImage.setImageResource(petsModelArrayList.get(position).getUrlGender());
     }
 
     @Override

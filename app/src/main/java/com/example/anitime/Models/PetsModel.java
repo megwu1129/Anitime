@@ -1,9 +1,10 @@
 package com.example.anitime.Models;
 
 public class PetsModel {
-    private String petName, ownerName, breeder, age, urlPic, urlGender;
+    private String petName, ownerName, breeder, age;
+    private int urlPic, urlGender;
 
-    public PetsModel(String petName, String ownerName, String breeder, String age, String urlPic, String urlGender) {
+    public PetsModel(String petName, String ownerName, String breeder, String age, int urlPic, int urlGender) {
         this.petName = petName;
         this.ownerName = ownerName;
         this.breeder = breeder;
@@ -28,11 +29,11 @@ public class PetsModel {
         return age;
     }
 
-    public String getUrlPic() {
+    public int getUrlPic() {
         return urlPic;
     }
 
-    public String getUrlGender() {
+    public int getUrlGender() {
         return urlGender;
     }
 }
