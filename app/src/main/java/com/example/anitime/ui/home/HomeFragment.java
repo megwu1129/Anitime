@@ -42,6 +42,7 @@ public class HomeFragment extends Fragment  {
 //        peekButton.setOnClickListener(this);
 //        recyclerView = findViewById(R.id.recyclerView);
         recyclerView = rootView.findViewById(R.id.recyclerView);
+        petsRecyclerViewAdapter = new PetsRecyclerViewAdapter(PetsRepo.getPetsRepo().getPetsModelList());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
         recyclerView.setAdapter(petsRecyclerViewAdapter);
