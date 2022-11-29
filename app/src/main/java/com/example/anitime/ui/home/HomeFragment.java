@@ -31,8 +31,8 @@ import com.example.anitime.Repository.PetsRepo;
 
 public class HomeFragment extends Fragment  {
 
-//    RecyclerView recyclerView;
-//    PetsRecyclerViewAdapter petsRecyclerViewAdapter;
+    RecyclerView recyclerView;
+    PetsRecyclerViewAdapter petsRecyclerViewAdapter;
 //    private ImageView peekButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +41,10 @@ public class HomeFragment extends Fragment  {
 //        peekButton = (ImageView) rootView.findViewById(R.id.card_image3);
 //        peekButton.setOnClickListener(this);
 //        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = rootView.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
+        recyclerView.setAdapter(petsRecyclerViewAdapter);
         return rootView;
     }
 //    void initRecyclerView(){
