@@ -16,6 +16,7 @@ public class PetsRepo {
         petsModelList.add(new PetsModel("Cupper", "Daniel", "breeder", "8month", "@drawable/pet4", "@drawable/female_icon"));
         petsModelList.add(new PetsModel("Dogge", "Andy", "breeder", "4month", "@drawable/pet2", "@drawable/female_icon"));
 
+
     }
 
     public static PetsRepo getPetsRepo() {
