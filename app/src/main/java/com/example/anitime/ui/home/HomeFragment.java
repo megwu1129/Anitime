@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,17 +29,28 @@ import com.example.anitime.RegisterUser;
 import com.example.anitime.Repository.PetsRepo;
 //import com.example.anitime.databinding.FragmentHomeBinding;
 
-//public class HomeFragment extends Fragment  {
-//
+public class HomeFragment extends Fragment  {
+
 //    RecyclerView recyclerView;
-////    private ImageView peekButton;
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        View rootView = inflater.inflate(R.layout.fragment_pet_profiles, container, false);
+//    PetsRecyclerViewAdapter petsRecyclerViewAdapter;
+//    private ImageView peekButton;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_pet_profiles, container, false);
 //        peekButton = (ImageView) rootView.findViewById(R.id.card_image3);
 //        peekButton.setOnClickListener(this);
-//        return rootView;
+//        recyclerView = findViewById(R.id.recyclerView);
+        return rootView;
+    }
+//    void initRecyclerView(){
+//        FragmentManager fragmentManager = new FragmentManager(this);
+//        petsRecyclerViewAdapter = new PetsRecyclerViewAdapter(PetsRepo.getPetsRepo().getPetsModelList());
+//        Log.i("data-->",""+PetsRepo.getPetsRepo().getPetsModelList().size());
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        recyclerView.setAdapter(petsRecyclerViewAdapter);
+//        petsRecyclerViewAdapter.notifyDataSetChanged();
+//
 //    }
 
 //    public void onClick(View v) {
@@ -67,25 +80,25 @@ import com.example.anitime.Repository.PetsRepo;
 //        super.onDestroyView();
 //        binding = null;
 //    }
-//}
-public class PetsProfile extends AppCompatActivity {
-    RecyclerView recyclerView;
-    PetsRecyclerViewAdapter petsRecyclerViewAdapter;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_pet_profiles);
-
-        recyclerView = findViewById(R.id.recyclerView);
-        initRecyclerView();
-    }
-    void initRecyclerView(){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        petsRecyclerViewAdapter = new PetsRecyclerViewAdapter(PetsRepo.getPetsRepo().getPetsModelList());
-        Log.i("data-->",""+PetsRepo.getPetsRepo().getPetsModelList().size());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(petsRecyclerViewAdapter);
-        petsRecyclerViewAdapter.notifyDataSetChanged();
-
-    }
 }
+//public class HomeFragment extends Fragment {
+//    RecyclerView recyclerView;
+//    PetsRecyclerViewAdapter petsRecyclerViewAdapter;
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.fragment_pet_profiles);
+//
+//        recyclerView = findViewById(R.id.recyclerView);
+//        initRecyclerView();
+//    }
+//    void initRecyclerView(){
+//        FragmentManager fragmentManager = new FragmentManager(this);
+//        petsRecyclerViewAdapter = new PetsRecyclerViewAdapter(PetsRepo.getPetsRepo().getPetsModelList());
+//        Log.i("data-->",""+PetsRepo.getPetsRepo().getPetsModelList().size());
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        recyclerView.setAdapter(petsRecyclerViewAdapter);
+//        petsRecyclerViewAdapter.notifyDataSetChanged();
+//
+//    }
+//}
