@@ -1,15 +1,18 @@
 package com.example.anitime.Models;
 
-public class EventModel {
-    private String day, month, title, location, count, url;
+import android.widget.ImageView;
 
-    public EventModel(String day, String month, String title, String location, String count, String url) {
+public class EventModel {
+    private String day, month, title, location, count;
+    public int imageView;
+
+    public EventModel(String day, String month, String title, String location, String count, int image) {
         this.day = day;
         this.month = month;
         this.title = title;
         this.location = location;
         this.count = count;
-        this.url = url;
+        this.imageView = image;
     }
 
     public String getDay() {
@@ -32,7 +35,7 @@ public class EventModel {
         return count;
     }
 
-    public String getUrl() {
-        return url;
+    public int getImageView() {
+        return imageView;
     }
 }

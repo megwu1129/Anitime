@@ -35,6 +35,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
         holder.title.setText(eventModelArrayList.get(position).getTitle());
         holder.location.setText(eventModelArrayList.get(position).getLocation());
         holder.count.setText(eventModelArrayList.get(position).getCount());
+        holder.imageView.setImageResource(eventModelArrayList.get(position).getImageView());
 
     }
 
@@ -44,9 +45,8 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-
+        ImageView imageView;
         TextView date, month, title, location, count;
-        ImageView eventImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             date = itemView.findViewById(R.id.day);
@@ -54,7 +54,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
             title = itemView.findViewById(R.id.eventTitle);
             location = itemView.findViewById(R.id.location);
             count = itemView.findViewById(R.id.count);
-            eventImage = itemView.findViewById(R.id.event_card_image);
+            imageView = itemView.findViewById(R.id.event_card_image);
         }
     }
 }
