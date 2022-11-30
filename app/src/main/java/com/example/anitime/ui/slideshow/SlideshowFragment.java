@@ -41,8 +41,7 @@ import com.example.anitime.Repository.PetsRepo;
 //        }
 //    }
 //}
-
-public class SlideshowFragment extends Fragment {
+public class SlideshowFragment extends Fragment implements EventsRecyclerViewAdapter.RecyclerviewOnClickListener {
     RecyclerView recyclerView;
     EventsRecyclerViewAdapter eventsRecyclerViewAdapter;
 
@@ -50,10 +49,17 @@ public class SlideshowFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_events, container, false);
         recyclerView = rootView.findViewById(R.id.recyclerView);
-        eventsRecyclerViewAdapter = new EventsRecyclerViewAdapter(EventsRepo.getEventsRepo().getEventModelList());
+        eventsRecyclerViewAdapter = new EventsRecyclerViewAdapter(EventsRepo.getEventsRepo().getEventModelList(), this);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
         recyclerView.setAdapter(eventsRecyclerViewAdapter);
         return rootView;
+    }
+
+    @Override
+    public void recyclerviewClick(int position) {
+        Intent intent = new Intent(getContext(), EventActivity.class);
+        startActivity(intent);
+
     }
 }
