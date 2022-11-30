@@ -30,11 +30,27 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
 
+        <Button
+            android:id="@+id/BSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="SELECT IMAGE"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/IVPreviewImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/avatar" />
+            android:layout_height="100dp"
+            android:layout_below="@id/BSelectImage"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+
 
         <LinearLayout
             android:id="@+id/ll3"
@@ -507,7 +523,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/back"
-                android:inputType="numberPassword"
+                android:inputType="number"
                 android:minHeight="48dp" />
         </LinearLayout>
 

@@ -1,5 +1,7 @@
 package com.example.anitime.ui.gallery;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,7 +18,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.anitime.R;
+import com.example.anitime.Repository.PetsRepo;
 import com.example.anitime.databinding.FragmentYourProfileBinding;
+import com.example.anitime.databinding.PetDetailBinding;
+
+import javax.xml.transform.Result;
 
 public class GalleryFragment extends Fragment {
 
@@ -23,9 +30,12 @@ public class GalleryFragment extends Fragment {
 
     private Button saveInfo;
     private Button editInfo;
+    private Button BSelectImage;
+    ImageView IVPreviewImage;
+    int SELECT_PICTURE = 200;
     EditText etname,etbreed,etage,etgender, etweight, etOwner, etPhone;
     TextView dName, dBreed, dAge, dGender, dWeight, dOwner, dPhone;
-    LinearLayout linL0, linL1, linL2, linL3, linL00;
+    LinearLayout linL3, linL00;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -61,6 +71,15 @@ public class GalleryFragment extends Fragment {
 
         linL00.setVisibility(View.GONE);
 
+        BSelectImage = (Button) rootView.findViewById(R.id.BSelectImage);
+        IVPreviewImage = (ImageView) rootView.findViewById(R.id.IVPreviewImage);
+        BSelectImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageChooser();
+            }
+        });
+
         saveInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +109,9 @@ public class GalleryFragment extends Fragment {
                 saveInfo.setVisibility(View.GONE);
                 editInfo.setVisibility(View.VISIBLE);
 
+                PetsRepo.addPet(dName.getText().toString(), dOwner.getText().toString(), dBreed.getText().toString(), dAge.getText().toString());
+                PetsRepo.printPets();
+
             }
         });
 
@@ -101,12 +123,43 @@ public class GalleryFragment extends Fragment {
 
                 linL00.setVisibility(View.VISIBLE);
                 linL3.setVisibility(View.GONE);
-            }
+
+                }
         });
 
         final TextView textView = binding.textGallery;
         galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return rootView;
+    }
+
+    void imageChooser() {
+        // create an instance of the
+        // intent of the type image
+        Intent i = new Intent();
+        i.setType("image/*");
+        i.setAction(Intent.ACTION_GET_CONTENT);
+
+        // pass the constant to compare it
+        // with the returned requestCode
+        startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == android.app.Activity.RESULT_OK) {
+
+            // compare the resultCode with the
+            // SELECT_PICTURE constant
+            if (requestCode == SELECT_PICTURE) {
+                // Get the url of the image from data
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    // update the preview image in the layout
+                    IVPreviewImage.setImageURI(selectedImageUri);
+                }
+            }
+        }
     }
 
     @Override
