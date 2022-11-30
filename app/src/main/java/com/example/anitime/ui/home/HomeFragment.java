@@ -23,13 +23,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.anitime.Adapters.PetsRecyclerViewAdapter;
+import com.example.anitime.EventActivity;
 import com.example.anitime.Pet_details;
 import com.example.anitime.R;
 import com.example.anitime.RegisterUser;
 import com.example.anitime.Repository.PetsRepo;
 //import com.example.anitime.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment  {
+public class HomeFragment extends Fragment implements PetsRecyclerViewAdapter.RecyclerviewOnClickListener {
 
     RecyclerView recyclerView;
     PetsRecyclerViewAdapter petsRecyclerViewAdapter;
@@ -42,11 +43,17 @@ public class HomeFragment extends Fragment  {
 //        peekButton.setOnClickListener(this);
 //        recyclerView = findViewById(R.id.recyclerView);
         recyclerView = rootView.findViewById(R.id.recyclerView);
-        petsRecyclerViewAdapter = new PetsRecyclerViewAdapter(PetsRepo.getPetsRepo().getPetsModelList());
+        petsRecyclerViewAdapter = new PetsRecyclerViewAdapter(PetsRepo.getPetsRepo().getPetsModelList(), this);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
         recyclerView.setAdapter(petsRecyclerViewAdapter);
         return rootView;
+    }
+    @Override
+    public void recyclerviewClick(int position) {
+        Intent intent = new Intent(getContext(), Pet_details.class);
+        startActivity(intent);
+
     }
 //    void initRecyclerView(){
 //        FragmentManager fragmentManager = new FragmentManager(this);
