@@ -17,16 +17,18 @@ import java.util.ArrayList;
 
 public class PetsRecyclerViewAdapter extends RecyclerView.Adapter<PetsRecyclerViewAdapter.ViewHolder> {
     ArrayList<PetsModel> petsModelArrayList = new ArrayList<>();
+    private RecyclerviewOnClickListener mRecyclerviewOnClickListener;
 
-    public PetsRecyclerViewAdapter(ArrayList<PetsModel> petsModelArrayList) {
+    public PetsRecyclerViewAdapter(ArrayList<PetsModel> petsModelArrayList, RecyclerviewOnClickListener recyclerviewOnClickListener) {
         this.petsModelArrayList = petsModelArrayList;
+        this.mRecyclerviewOnClickListener = recyclerviewOnClickListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View cardView = LayoutInflater.from(parent.getContext()).inflate(R.layout.pet_card,parent,false);
-        return new PetsRecyclerViewAdapter.ViewHolder(cardView);
+        return new PetsRecyclerViewAdapter.ViewHolder(cardView, mRecyclerviewOnClickListener);
     }
 
     @Override
@@ -44,11 +46,12 @@ public class PetsRecyclerViewAdapter extends RecyclerView.Adapter<PetsRecyclerVi
         return petsModelArrayList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView petName, ownerName, breeder, age;
         ImageView petImage, genderImage;
-        public ViewHolder(@NonNull View itemView) {
+        RecyclerviewOnClickListener recyclerviewOnClickListener;
+        public ViewHolder(@NonNull View itemView, RecyclerviewOnClickListener recyclerviewOnClickListener) {
             super(itemView);
             petName = itemView.findViewById(R.id.PetName);
             ownerName = itemView.findViewById(R.id.OwnerName);
@@ -56,7 +59,17 @@ public class PetsRecyclerViewAdapter extends RecyclerView.Adapter<PetsRecyclerVi
             age = itemView.findViewById(R.id.age);
             petImage = itemView.findViewById(R.id.card_image);
             genderImage = itemView.findViewById(R.id.genderImage);
+            this.recyclerviewOnClickListener = recyclerviewOnClickListener;
+            itemView.setOnClickListener(this);
         }
+        @Override
+        public void onClick(View view) {
+            recyclerviewOnClickListener.recyclerviewClick(getAdapterPosition());
+
+        }
+    }
+    public interface RecyclerviewOnClickListener{
+        void recyclerviewClick(int position);
     }
 
 }
