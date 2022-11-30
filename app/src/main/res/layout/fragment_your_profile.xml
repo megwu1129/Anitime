@@ -36,18 +36,6 @@
             android:layout_height="200dp"
             android:src="@drawable/avatar" />
 
-        <TextView
-            android:id="@+id/display"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="10dp"
-            android:scrollbars="vertical"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
-
         <LinearLayout
             android:id="@+id/ll3"
             android:layout_width="match_parent"
@@ -55,18 +43,43 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/disName"
+            <LinearLayout
+                android:id="@+id/h1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:scrollbars="vertical"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="18sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/back"/>
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/headerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="Pet Name:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/disName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+            </LinearLayout>
+
+
 
             <LinearLayout
                 android:id="@+id/ll4"
@@ -74,6 +87,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/headerAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="Age:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
 
                 <TextView
                     android:id="@+id/disAge"
@@ -90,6 +117,21 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:ems="10"/>
+
+
+                <TextView
+                    android:id="@+id/headerBreed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="Breed:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
 
                 <TextView
                     android:id="@+id/disBreed"
@@ -116,6 +158,20 @@
                 android:gravity="center_horizontal">
 
                 <TextView
+                    android:id="@+id/headerGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="M/F:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+                <TextView
                     android:id="@+id/disGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,6 +186,20 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:ems="10"/>
+
+                <TextView
+                    android:id="@+id/headerWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="Weight:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
 
                 <TextView
                     android:id="@+id/disWeight"
@@ -148,14 +218,104 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/ll25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
 
+                <TextView
+                    android:id="@+id/headerOwnerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="Owner:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/disOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/headerPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:text="Phone:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/disPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back"/>
+
+            </LinearLayout>
         </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/ll0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="Pet Name:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
 
             <EditText
                 android:id="@+id/editTextPetName"
@@ -164,7 +324,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/back"
-                android:hint="Name"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
         </LinearLayout>
@@ -174,6 +333,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header2Age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="Age:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
 
             <EditText
                 android:id="@+id/editTextTextPetAge"
@@ -185,9 +358,22 @@
                 android:layout_weight="1"
                 android:background="@drawable/back"
                 android:ems="10"
-                android:hint="Age"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/header2Breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="Breed:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
 
             <EditText
                 android:id="@+id/editTextTextPetBreed"
@@ -198,7 +384,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/back"
                 android:ems="10"
-                android:hint="Breed"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
         </LinearLayout>
@@ -208,6 +393,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header2Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="M/F:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
 
             <EditText
                 android:id="@+id/editTextTextPetGender"
@@ -219,9 +418,22 @@
                 android:layout_weight="1"
                 android:background="@drawable/back"
                 android:ems="10"
-                android:hint="Gender"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/header2Weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="Weight:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
 
             <EditText
                 android:id="@+id/editTextTextPetWeight"
@@ -232,11 +444,76 @@
                 android:layout_weight="1"
                 android:background="@drawable/back"
                 android:ems="10"
-                android:hint="Weight"
-                android:inputType="textPersonName"
+                android:inputType="numberDecimal"
                 android:minHeight="48dp" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header2Owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="Owner:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
+
+            <EditText
+                android:id="@+id/editTextOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header2Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="18sp"
+                android:text="Phone:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"/>
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back"
+                android:inputType="numberPassword"
+                android:minHeight="48dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
         <Button
             android:id="@+id/editButton"

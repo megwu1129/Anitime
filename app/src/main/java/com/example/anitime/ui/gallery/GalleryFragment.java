@@ -23,9 +23,9 @@ public class GalleryFragment extends Fragment {
 
     private Button saveInfo;
     private Button editInfo;
-    EditText etname,etbreed,etage,etgender, etweight;
-    TextView dName, dBreed, dAge, dGender, dWeight, display;
-    LinearLayout linL0, linL1, linL2, linL3;
+    EditText etname,etbreed,etage,etgender, etweight, etOwner, etPhone;
+    TextView dName, dBreed, dAge, dGender, dWeight, dOwner, dPhone;
+    LinearLayout linL0, linL1, linL2, linL3, linL00;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +43,8 @@ public class GalleryFragment extends Fragment {
         dAge = (TextView) rootView.findViewById(R.id.disAge);
         dGender = (TextView) rootView.findViewById(R.id.disGender);
         dWeight = (TextView) rootView.findViewById(R.id.disWeight);
+        dOwner = (TextView) rootView.findViewById(R.id.disOwner);
+        dPhone = (TextView) rootView.findViewById(R.id.disPhone);
 
         /*
         dName.setText("Name: " + etname.getText().toString());
@@ -54,13 +56,10 @@ public class GalleryFragment extends Fragment {
 
         editInfo.setVisibility(View.VISIBLE);
         saveInfo.setVisibility(View.GONE);
-        linL0 = (LinearLayout) rootView.findViewById(R.id.ll0);
-        linL1 = (LinearLayout) rootView.findViewById(R.id.ll1);
-        linL2 = (LinearLayout) rootView.findViewById(R.id.ll2);
+        linL00 = (LinearLayout) rootView.findViewById(R.id.ll00);
         linL3 = (LinearLayout) rootView.findViewById(R.id.ll3);
-        linL0.setVisibility(View.GONE);
-        linL1.setVisibility(View.GONE);
-        linL2.setVisibility(View.GONE);
+
+        linL00.setVisibility(View.GONE);
 
         saveInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,22 +69,23 @@ public class GalleryFragment extends Fragment {
                 etage=(EditText) rootView.findViewById(R.id.editTextTextPetAge);
                 etgender=(EditText) rootView.findViewById(R.id.editTextTextPetGender);
                 etweight=(EditText) rootView.findViewById(R.id.editTextTextPetWeight);
+                etOwner=(EditText) rootView.findViewById(R.id.editTextOwner);
+                etPhone=(EditText) rootView.findViewById(R.id.editTextPhone);
 
                 //+"\nBreed: "+etbreed.getText().toString()+"\nAge: "+etage.getText().toString()
                 // +"\nGender: "+etgender.getText().toString()
                 //  +"\nWeight: "+etweight.getText().toString());
 
-                dName.setText("Name: " + etname.getText().toString());
-                dBreed.setText("Breed: " + etbreed.getText().toString());
-                dAge.setText("Age: "+ etage.getText().toString());
-                dGender.setText("Gender: "+ etgender.getText().toString());
-                dWeight.setText("Weight: "+ etweight.getText().toString());
+                dName.setText(etname.getText().toString());
+                dBreed.setText(etbreed.getText().toString());
+                dAge.setText(etage.getText().toString());
+                dGender.setText(etgender.getText().toString());
+                dWeight.setText(etweight.getText().toString());
+                dOwner.setText(etOwner.getText().toString());
+                dPhone.setText(etPhone.getText().toString());
 
                 linL3.setVisibility(View.VISIBLE);
-
-                linL0.setVisibility(View.GONE);
-                linL1.setVisibility(View.GONE);
-                linL2.setVisibility(View.GONE);
+                linL00.setVisibility(View.GONE);
 
                 saveInfo.setVisibility(View.GONE);
                 editInfo.setVisibility(View.VISIBLE);
@@ -99,10 +99,7 @@ public class GalleryFragment extends Fragment {
                 saveInfo.setVisibility(View.VISIBLE);
                 editInfo.setVisibility(View.GONE);
 
-                linL0.setVisibility(View.VISIBLE);
-                linL1.setVisibility(View.VISIBLE);
-                linL2.setVisibility(View.VISIBLE);
-
+                linL00.setVisibility(View.VISIBLE);
                 linL3.setVisibility(View.GONE);
             }
         });
