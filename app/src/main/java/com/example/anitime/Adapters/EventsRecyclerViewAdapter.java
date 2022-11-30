@@ -16,16 +16,18 @@ import java.util.ArrayList;
 
 public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecyclerViewAdapter.ViewHolder> {
     ArrayList<EventModel> eventModelArrayList = new ArrayList<>();
+    private RecyclerviewOnClickListener mRecyclerviewOnClickListener;
 
-    public EventsRecyclerViewAdapter(ArrayList<EventModel> eventModelArrayList) {
+    public EventsRecyclerViewAdapter(ArrayList<EventModel> eventModelArrayList, RecyclerviewOnClickListener recyclerviewOnClickListener) {
         this.eventModelArrayList = eventModelArrayList;
+        this.mRecyclerviewOnClickListener = recyclerviewOnClickListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View cardView = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_card,parent,false);
-        return new EventsRecyclerViewAdapter.ViewHolder(cardView);
+        return new EventsRecyclerViewAdapter.ViewHolder(cardView, mRecyclerviewOnClickListener);
     }
 
     @Override
@@ -44,10 +46,11 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
         return eventModelArrayList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
         TextView date, month, title, location, count;
-        public ViewHolder(@NonNull View itemView) {
+        RecyclerviewOnClickListener recyclerviewOnClickListener;
+        public ViewHolder(@NonNull View itemView, RecyclerviewOnClickListener recyclerviewOnClickListener) {
             super(itemView);
             date = itemView.findViewById(R.id.day);
             month = itemView.findViewById(R.id.month);
@@ -55,6 +58,16 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
             location = itemView.findViewById(R.id.location);
             count = itemView.findViewById(R.id.count);
             imageView = itemView.findViewById(R.id.event_card_image);
+            this.recyclerviewOnClickListener = recyclerviewOnClickListener;
+            itemView.setOnClickListener(this);
         }
+        @Override
+        public void onClick(View view) {
+            recyclerviewOnClickListener.recyclerviewClick(getAdapterPosition());
+
+        }
+    }
+    public interface RecyclerviewOnClickListener{
+        void recyclerviewClick(int position);
     }
 }
