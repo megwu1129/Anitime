@@ -21,6 +21,10 @@
 <!--            android:icon="@drawable/ic_menu_slideshow"-->
 
         <item
+            android:id="@+id/nav_CreateEvent"
+            android:title="@string/menu_createEvent" />
+
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/menu_logout" />
     </group>

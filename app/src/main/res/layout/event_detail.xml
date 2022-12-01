@@ -292,6 +292,7 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/attendButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
@@ -303,6 +304,7 @@
             android:text="ATTEND"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:onClick="OnClick"
             >
 
         </com.google.android.material.button.MaterialButton>

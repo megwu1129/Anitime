@@ -11,6 +11,7 @@
     <string name="menu_home">Pet Profiles</string>
     <string name="menu_gallery">Your Profile</string>
     <string name="menu_slideshow">Events</string>
+    <string name="menu_createEvent">Create An Event</string>
     <string name="menu_logout">Log Out</string>
 
     <string name="user_name">User Name</string>

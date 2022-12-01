@@ -5,6 +5,7 @@ import com.example.anitime.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class PetsRepo {
     private static PetsRepo petsRepo;
@@ -17,8 +18,16 @@ public class PetsRepo {
         petsModelList.add(new PetsModel("Dogge", "Andy", "breeder", "4month", R.drawable.pet4, R.drawable.male_icon));
     }
 
-    public static void addPet(String name,  String Owner, String breeder, String age) {
-        petsModelList.add(new PetsModel(name, Owner, breeder, age, R.drawable.pet2, R.drawable.female_icon));
+    public static void addPet(String name,  String owner, String breeder, String age, String gender) {
+        petsModelList.add(new PetsModel(name, owner, breeder, age, R.drawable.pet2, getGenderImage(gender)));
+    }
+
+    public static int getGenderImage(String gender) {
+        if (gender.equalsIgnoreCase("m")) {
+            return R.drawable.male_icon;
+        } else {
+            return R.drawable.female_icon;
+        }
     }
 
     public static void printPets() {
