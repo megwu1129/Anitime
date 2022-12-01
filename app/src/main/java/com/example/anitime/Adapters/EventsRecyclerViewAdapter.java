@@ -38,7 +38,6 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
         holder.location.setText(eventModelArrayList.get(position).getLocation());
         holder.count.setText(eventModelArrayList.get(position).getCount());
         holder.imageView.setImageResource(eventModelArrayList.get(position).getImageView());
-
     }
 
     @Override
@@ -63,8 +62,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
         }
         @Override
         public void onClick(View view) {
-            recyclerviewOnClickListener.recyclerviewClick(getAdapterPosition());
-
+            recyclerviewOnClickListener.recyclerviewClick(getAbsoluteAdapterPosition());
         }
     }
     public interface RecyclerviewOnClickListener{
