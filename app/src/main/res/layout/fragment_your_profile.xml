@@ -434,6 +434,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/back"
                 android:ems="10"
+                android:maxLength="1"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 

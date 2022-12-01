@@ -72,6 +72,8 @@ public class GalleryFragment extends Fragment {
         linL00.setVisibility(View.GONE);
 
         BSelectImage = (Button) rootView.findViewById(R.id.BSelectImage);
+        BSelectImage.setVisibility(View.GONE);
+
         IVPreviewImage = (ImageView) rootView.findViewById(R.id.IVPreviewImage);
         BSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +111,9 @@ public class GalleryFragment extends Fragment {
                 saveInfo.setVisibility(View.GONE);
                 editInfo.setVisibility(View.VISIBLE);
 
-                PetsRepo.addPet(dName.getText().toString(), dOwner.getText().toString(), dBreed.getText().toString(), dAge.getText().toString());
+                BSelectImage.setVisibility(View.GONE);
+
+                PetsRepo.addPet(dName.getText().toString(), dOwner.getText().toString(), dBreed.getText().toString(), dAge.getText().toString(), dGender.getText().toString());
                 PetsRepo.printPets();
 
             }
@@ -123,6 +127,8 @@ public class GalleryFragment extends Fragment {
 
                 linL00.setVisibility(View.VISIBLE);
                 linL3.setVisibility(View.GONE);
+
+                BSelectImage.setVisibility(View.VISIBLE);
 
                 }
         });
