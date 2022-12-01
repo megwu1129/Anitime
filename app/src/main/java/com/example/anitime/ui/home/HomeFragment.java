@@ -25,6 +25,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.anitime.Adapters.PetsRecyclerViewAdapter;
 import com.example.anitime.EventActivity;
 import com.example.anitime.Pet_details;
+import com.example.anitime.Pet_details0;
+import com.example.anitime.Pet_details1;
+import com.example.anitime.Pet_details2;
+import com.example.anitime.Pet_details3;
 import com.example.anitime.R;
 import com.example.anitime.RegisterUser;
 import com.example.anitime.Repository.PetsRepo;
@@ -51,7 +55,18 @@ public class HomeFragment extends Fragment implements PetsRecyclerViewAdapter.Re
     }
     @Override
     public void recyclerviewClick(int position) {
-        Intent intent = new Intent(getContext(), Pet_details.class);
+        Intent intent;
+        System.out.println(position);
+        if (position == 0) {
+            intent = new Intent(getContext(), Pet_details0.class);
+        } else if (position == 1) {
+            intent = new Intent(getContext(), Pet_details1.class);
+        } else if (position == 2) {
+            intent = new Intent(getContext(), Pet_details2.class);
+        } else {
+            intent = new Intent(getContext(), Pet_details3.class);
+        }
+
         startActivity(intent);
 
     }

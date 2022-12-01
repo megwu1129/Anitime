@@ -51,6 +51,7 @@ public class PetsRecyclerViewAdapter extends RecyclerView.Adapter<PetsRecyclerVi
         TextView petName, ownerName, breeder, age;
         ImageView petImage, genderImage;
         RecyclerviewOnClickListener recyclerviewOnClickListener;
+        //final ItemUserBinding binding;
         public ViewHolder(@NonNull View itemView, RecyclerviewOnClickListener recyclerviewOnClickListener) {
             super(itemView);
             petName = itemView.findViewById(R.id.PetName);
@@ -61,10 +62,12 @@ public class PetsRecyclerViewAdapter extends RecyclerView.Adapter<PetsRecyclerVi
             genderImage = itemView.findViewById(R.id.genderImage);
             this.recyclerviewOnClickListener = recyclerviewOnClickListener;
             itemView.setOnClickListener(this);
+            //binding = ItemUserBinding.bind(itemView);
         }
         @Override
         public void onClick(View view) {
-            recyclerviewOnClickListener.recyclerviewClick(getAdapterPosition());
+            //System.out.println(getAbsoluteAdapterPosition());
+            recyclerviewOnClickListener.recyclerviewClick(getAbsoluteAdapterPosition());
 
         }
     }
