@@ -10,7 +10,7 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/eventCard"
+        android:id="@+id/eventCard2"
         android:layout_width="377dp"
         android:layout_height="664dp"
         android:layout_marginTop="32dp"
@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/event3"/>
+                    android:src="@drawable/event1"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -45,12 +45,11 @@
                     android:paddingBottom="25dp">
 
                     <TextView
-                        android:id="@+id/eventTile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="Puppy Social"
+                        android:text="1:1 Dog Training Class"
                         android:textColor="@android:color/black"
                         android:textSize="25dp"
                         android:textStyle="bold">
@@ -61,7 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Helms Park, Champaign"
+                        android:text="online"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="18sp">
 
@@ -105,7 +104,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
-                                    android:text="11/29/2022"
+                                    android:text="1/15/2023"
                                     android:textColor="@android:color/darker_gray"
                                     android:textSize="18sp"/>
                             </LinearLayout>
@@ -144,7 +143,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
-                                    android:text="1:00 PM"
+                                    android:text="10:00 AM"
                                     android:textColor="@android:color/darker_gray"
                                     android:textSize="18sp"/>
                             </LinearLayout>
@@ -165,9 +164,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Bring your puppy and let's have fun!"
+                        android:text="Do you want to learn how to train your dog well? Come join the 1:1 session to know more about dog training!"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="18sp">
+                        android:textSize="17sp">
 
                     </TextView>
 
@@ -203,7 +202,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Robert Langdon"
+                                android:text="Rachael Addams"
                                 android:textColor="@android:color/darker_gray"
                                 android:textSize="18sp"/>
                         </LinearLayout>
@@ -218,48 +217,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
-                            android:text="12 are going!"
+                            android:text="1 is going!"
                             android:textColor="@color/textBlue"
                             android:textSize="15sp"/>
                     </LinearLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageButton
-                            android:id="@+id/pet1"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/event_pet1"
-                            />
-                        <ImageButton
-                            android:id="@+id/pet2"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_toEndOf="@id/pet1"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="@drawable/event_pet2"
-                            />
-                        <ImageButton
-                            android:id="@+id/pet4"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_toEndOf="@id/pet2"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="@drawable/event_pet3"
-                            />
-                        <ImageButton
-                            android:id="@+id/pet5"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_toEndOf="@id/pet4"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="@drawable/event_pet4"
-                            />
-                    </RelativeLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -275,9 +236,8 @@
         android:gravity="center|start"
         android:orientation="horizontal"
         android:weightSum="10"
-        app:layout_constraintLeft_toLeftOf="@+id/eventCard"
-        app:layout_constraintRight_toRightOf="@+id/eventCard"
-        app:layout_constraintTop_toBottomOf="@+id/eventCard">
+        app:layout_constraintTop_toBottomOf="@+id/eventCard2"
+        tools:ignore="MissingConstraints">
 
         <ImageButton
             android:layout_width="40dp"
