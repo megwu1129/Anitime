@@ -1,7 +1,7 @@
 package com.example.anitime;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+//import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 

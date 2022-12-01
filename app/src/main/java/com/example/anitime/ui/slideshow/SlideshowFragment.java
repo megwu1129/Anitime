@@ -20,27 +20,10 @@ import com.example.anitime.R;
 import com.example.anitime.RegisterUser;
 import com.example.anitime.Repository.EventsRepo;
 import com.example.anitime.Repository.PetsRepo;
+import com.example.anitime.event_details;
+import com.example.anitime.event_details3;
+import com.example.anitime.event_details4;
 
-//public class SlideshowFragment extends Fragment implements View.OnClickListener {
-//
-//    private ImageView eventDetailButton;
-//
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        View rootView = inflater.inflate(R.layout.fragment_events, container, false);
-//        eventDetailButton = (ImageView) rootView.findViewById(R.id.card_image1);
-//        eventDetailButton.setOnClickListener(this);
-//        return rootView;
-//    }
-//
-//    public void onClick(View v) {
-//        if (v.getId() == R.id.card_image1) {
-//            Intent intent = new Intent(v.getContext(), EventActivity.class);
-//            startActivity(intent);
-//        }
-//    }
-//}
 public class SlideshowFragment extends Fragment implements EventsRecyclerViewAdapter.RecyclerviewOnClickListener {
     RecyclerView recyclerView;
     EventsRecyclerViewAdapter eventsRecyclerViewAdapter;
@@ -56,9 +39,19 @@ public class SlideshowFragment extends Fragment implements EventsRecyclerViewAda
         return rootView;
     }
 
-    @Override
     public void recyclerviewClick(int position) {
-        Intent intent = new Intent(getContext(), EventActivity.class);
+        Intent intent;
+        System.out.println(position);
+        if (position == 0) {
+            intent = new Intent(getContext(), EventActivity.class);
+        } else if (position == 1) {
+            intent = new Intent(getContext(), event_details.class);
+        } else if (position == 2) {
+            intent = new Intent(getContext(), event_details3.class);
+        } else {
+            intent = new Intent(getContext(), event_details4.class);
+        }
+
         startActivity(intent);
 
     }

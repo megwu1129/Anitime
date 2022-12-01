@@ -10,7 +10,7 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/eventCard2"
+        android:id="@+id/eventCard3"
         android:layout_width="377dp"
         android:layout_height="664dp"
         android:layout_marginTop="32dp"
@@ -164,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Want to help your dog more socialized? Want to find your dog friends? Come to our meetup to make new friends."
+                        android:text="Want to help your dog more socialized? Come to our meetup to make new friends."
                         android:textColor="@android:color/darker_gray"
                         android:textSize="17sp">
 
@@ -274,9 +274,9 @@
         android:gravity="center|start"
         android:orientation="horizontal"
         android:weightSum="10"
-        app:layout_constraintLeft_toLeftOf="@+id/eventCard"
-        app:layout_constraintRight_toRightOf="@+id/eventCard"
-        app:layout_constraintTop_toBottomOf="@+id/eventCard2">
+        app:layout_constraintLeft_toLeftOf="@+id/eventCard3"
+        app:layout_constraintRight_toRightOf="@+id/eventCard3"
+        app:layout_constraintTop_toBottomOf="@+id/eventCard3">
 
         <ImageButton
             android:layout_width="40dp"
@@ -291,6 +291,7 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/attendButton4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
