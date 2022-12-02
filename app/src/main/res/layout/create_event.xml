@@ -13,6 +13,18 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp">
 
+        <TextView
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="40sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
         <LinearLayout
             android:id="@+id/displayEvent"
             android:layout_width="match_parent"
@@ -226,7 +238,7 @@
                     android:background="@drawable/back"/>
 
                 <EditText
-                    android:id="@+id/editTextPetName"
+                    android:id="@+id/editTextEventName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -266,7 +278,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/back"
                     android:ems="10"
-                    android:inputType="number"
+                    android:inputType="textPersonName"
                     android:minHeight="44dp"
                     android:maxLength="3"/>
 
@@ -403,7 +415,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/saveEventButton"
+            android:id="@+id/createEventButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
