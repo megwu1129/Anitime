@@ -9,6 +9,7 @@
         android:layout_height="653dp"
         android:layout_gravity="bottom"
         android:background="@drawable/login_background"
+        android:alpha=".5"
         android:scaleType="centerCrop"></ImageView>
 
     <TextView
@@ -36,6 +37,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:textSize="24sp" />
 
@@ -44,6 +46,7 @@
             android:layout_width="355dp"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="@color/black"
             android:hint="Password"
             android:inputType="textPassword"
             android:textSize="24sp" />
